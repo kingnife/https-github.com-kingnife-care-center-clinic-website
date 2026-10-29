@@ -1,0 +1,268 @@
+/* ========================================================================= */
+/* CARE CENTER — SHARED GLASSMORPHISM STYLES (4-LAYER SYSTEM)                */
+/* ========================================================================= */
+
+html {
+  background-color: #050806;
+}
+
+body {
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+/* ========================================================================= */
+/* AMBIENT NATURE BLURRED BACKGROUND (FOR ALL SECTIONS EXCEPT HERO)           */
+/* ========================================================================= */
+
+.sanctuary-ambient-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sanctuary-ambient-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+  transform: scale(1.10) translateZ(0);
+  opacity: 0.68;
+  will-change: transform;
+}
+
+.sanctuary-ambient-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(180deg, rgba(5, 8, 6, 0.72) 0%, rgba(5, 8, 6, 0.45) 45%, rgba(5, 8, 6, 0.85) 100%),
+    rgba(5, 8, 6, 0.40);
+}
+
+/* Layer 2: Primary Glass Surface (Containers, Cards, Panels, Accordions) */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(125%);
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 8px 30px rgba(20, 48, 38, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  border-radius: 24px;
+}
+
+/* Layer 2 Dark Variant for Deep Forest Green Band */
+.glass-surface-dark {
+  background: rgba(8, 28, 20, 0.68);
+  backdrop-filter: blur(22px) saturate(130%);
+  -webkit-backdrop-filter: blur(22px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+
+/* Layer 3: Floating Glass Elements (Modals, Concierge, Hero Info Card, Dropdowns, Popovers) */
+.glass-floating {
+  background: rgba(250, 251, 247, 0.88);
+  backdrop-filter: blur(20px) saturate(135%);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  border: 1px solid rgba(255, 255, 255, 0.90);
+  box-shadow:
+    0 14px 38px rgba(12, 38, 29, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+}
+
+/* Dedicated Hero Floating Glass Card */
+.hero-glass-card {
+  background: rgba(250, 251, 247, 0.82);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 22px;
+  box-shadow:
+    0 12px 32px rgba(8, 47, 38, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Layer 3 Compact Glass Pill Controls */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px) saturate(125%);
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 18px rgba(20, 48, 38, 0.05);
+  border-radius: 9999px;
+}
+
+/* Layer 4: Active / Selected Elements */
+.glass-active-slot {
+  background: rgba(221, 242, 223, 0.65);
+  border: 1px solid rgba(8, 47, 38, 0.35);
+  box-shadow: 0 0 0 1px rgba(8, 47, 38, 0.2);
+}
+
+/* Asymmetric Hero Image Radius */
+.hero-image-clip {
+  border-top-left-radius: 56px;
+  border-bottom-left-radius: 56px;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+@media (min-width: 640px) {
+  .hero-image-clip {
+    border-top-left-radius: 72px;
+    border-bottom-left-radius: 72px;
+    border-top-right-radius: 36px;
+    border-bottom-right-radius: 36px;
+  }
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C2D9C5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9FD8A4;
+}
+
+/* ========================================================================= */
+/* DARK GLASSMORPHISM HERO SECTION CLASSES (MASTER PROMPT SPECIFICATION)     */
+/* ========================================================================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 13, 8, 0.88) 0%,
+      rgba(3, 13, 8, 0.54) 38%,
+      rgba(3, 13, 8, 0.12) 72%,
+      rgba(3, 13, 8, 0.22) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(3, 13, 8, 0.60) 0%,
+      transparent 38%
+    );
+  pointer-events: none;
+}
+
+.hero-nav-glass {
+  background: rgba(12, 25, 18, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border-radius: 999px;
+}
+
+.mental-health-glass-card {
+  background: rgba(31, 43, 29, 0.58);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.20);
+}
+
+.hero-service-glass {
+  background: rgba(9, 23, 15, 0.72);
+  backdrop-filter: blur(22px) saturate(130%);
+  -webkit-backdrop-filter: blur(22px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .hero-service-glass {
+    border-radius: 24px;
+  }
+}
+
+/* ========================================================================= */
+/* ACCESSIBILITY UTILITIES & FOCUS ENHANCEMENTS                              */
+/* ========================================================================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  background-color: #A7E8BD;
+  color: #06291E;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 2px solid #A7E8BD !important;
+  outline-offset: 3px !important;
+}
+
+.touch-target-44 {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================================================= */
+/* PRODUCTION EDITORIAL NAVIGATION OVERLAY GLASSMORPHISM                     */
+/* ========================================================================= */
+
+.nav-overlay-backdrop {
+  background: rgba(5, 8, 6, 0.86);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+.nav-overlay-card {
+  background: rgba(10, 24, 16, 0.94);
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 24px 64px -12px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+}
+

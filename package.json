@@ -1,0 +1,21 @@
+{
+  "name": "care-center-clinic-website",
+  "version": "1.0.0",
+  "description": "Care Center — Complete Care. A Calmer You. Thoughtful Psychiatry, Psychotherapy, and Medical Wellness Sanctuary website",
+  "scripts": {
+    "start": "npx --yes serve .",
+    "dev": "npx --yes serve ."
+  },
+  "keywords": [
+    "care-center",
+    "clinic",
+    "psychiatry",
+    "psychotherapy",
+    "mental-health",
+    "healthcare-website",
+    "wellness-sanctuary"
+  ],
+  "author": "Care Center Clinical Group",
+  "license": "MIT"
+}
+

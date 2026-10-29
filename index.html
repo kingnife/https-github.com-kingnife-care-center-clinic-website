@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Care Center | Health · Mind · You — General Medical & Mental Wellness</title>
+  <meta name="description" content="Care Center brings together thoughtful medical care, integrative psychiatry, and compassionate psychotherapy in an unhurried, welcoming sanctuary with a cohesive glassmorphism interface.">
+  <meta name="keywords" content="care center, mental health sanctuary, integrative psychiatry, psychotherapy, general medicine, San Francisco, unhurried healthcare, holistic wellness">
+  <link rel="canonical" href="https://carecenter.health/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carecenter.health/">
+  <meta property="og:title" content="Care Center | Health · Mind · You — General Medical & Mental Wellness">
+  <meta property="og:description" content="Care Center brings together thoughtful medical care, integrative psychiatry, and compassionate psychotherapy in an unhurried, welcoming sanctuary.">
+  <meta property="og:image" content="https://carecenter.health/hero-forest-meditation.jpg">
+  <meta property="og:site_name" content="Care Center">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Care Center | Health · Mind · You — General Medical & Mental Wellness">
+  <meta name="twitter:description" content="Care Center brings together thoughtful medical care, integrative psychiatry, and compassionate psychotherapy in an unhurried, welcoming sanctuary.">
+  <meta name="twitter:image" content="https://carecenter.health/hero-forest-meditation.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23A7E8BD'><path d='M12 2C6.48 2 2 6.48 2 12c0 4.12 2.5 7.66 6.07 9.18.23-.27.46-.57.7-.89 1.76-2.34 2.87-5.26 3.16-8.29.02-.2.19-.36.39-.36.2 0 .37.16.39.36.29 3.03 1.4 5.95 3.16 8.29.24.32.47.62.7.89C20.5 19.66 23 16.12 23 12c0-5.52-4.48-10-10-10zm-1.89 9.87c-.36 1.76-1.12 3.39-2.21 4.75-2.03-1.02-3.48-3.03-3.78-5.42 1.94-.48 4.22-.16 5.99.67zm7.88-.67c-.3 2.39-1.75 4.4-3.78 5.42-1.09-1.36-1.85-2.99-2.21-4.75 1.77-.83 4.05-1.15 5.99-.67z'/></svg>">
+  <meta name="theme-color" content="#050806">
+  
+  <!-- DNS Prefetch & Preconnect for CDNs and Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://unpkg.com">
+
+  <!-- Preload Critical LCP Hero Frame 1 -->
+  <link rel="preload" as="image" href="clinic/ezgif-frame-001.jpg" fetchpriority="high">
+  
+  <!-- Google Fonts: Playfair Display & DM Sans / Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons (Pinned version to prevent 302 redirects) -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <!-- Shared Glassmorphism CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              950: '#041F18',
+              900: '#082F26', // Primary forest green
+              850: '#061F1A', // Deep green
+              800: '#0C3D32',
+              700: '#145445',
+              600: '#1D6B58',
+            },
+            cream: {
+              50: '#FCFAF7',
+              100: '#F8F7F2', // Warm cream background
+              200: '#F0EEE5',
+              300: '#E4E0D4',
+            },
+            mint: {
+              50: '#F3FAF4',
+              100: '#DDF2DF', // Soft mint
+              200: '#C1E7C4',
+              300: '#9FD8A4',
+            },
+            sage: {
+              50: '#F4F7F4',
+              100: '#E8F0E7', // Muted sage
+              200: '#DEEFE0',
+              300: '#C2D9C5',
+            },
+            content: {
+              primary: '#203A32',
+              secondary: '#5F6B64',
+              muted: '#7C867F',
+              border: '#E9E8E2',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', '"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://carecenter.health/#clinic",
+        "name": "Care Center",
+        "alternateName": "Care Center Health · Mind · You",
+        "url": "https://carecenter.health",
+        "logo": "https://carecenter.health/logo.png",
+        "image": "https://carecenter.health/hero-forest-meditation.jpg",
+        "description": "Integrative psychiatry, psychotherapy, and medical wellness sanctuary in San Francisco with unhurried 45-60 minute appointments.",
+        "telephone": "+1-415-890-2273",
+        "email": "concierge@carecenter.health",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "842 Sanctuary Way, Suite 400, Presidio Health Oasis",
+          "addressLocality": "San Francisco",
+          "addressRegion": "CA",
+          "postalCode": "94129",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.7985,
+          "longitude": -122.466
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "07:30",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:30",
+            "closes": "14:00"
+          }
+        ],
+        "medicalSpecialty": [
+          "Psychiatry",
+          "Psychotherapy",
+          "Integrative Medicine"
+        ],
+        "isAcceptingNewPatients": true,
+        "priceRange": "$$"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://carecenter.health/#website",
+        "url": "https://carecenter.health",
+        "name": "Care Center | Health · Mind · You",
+        "publisher": {
+          "@id": "https://carecenter.health/#clinic"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="text-white font-sans antialiased selection:bg-[#A7E8BD] selection:text-[#06291E] min-h-screen flex flex-col relative overflow-x-hidden">
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================= -->
+  <!-- EMERGENCY CRISIS NOTICE BANNER                                            -->
+  <!-- ========================================================================= -->
+  <aside aria-label="Crisis Support Bar" class="bg-gradient-to-r from-emerald-950 via-[#061F1A] to-emerald-950 border-b border-white/10 px-4 py-2 text-[11px] sm:text-xs text-white/80 relative z-30">
+    <div class="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-950/80 border border-red-500/40 text-red-300 font-semibold text-[10px] uppercase tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse"></span>
+          Emergency Notice
+        </span>
+        <span>Life-threatening emergency? Call <strong>911</strong>. Acute mental health crisis or suicidal thoughts? Dial or text <strong class="text-[#A7E8BD]">988</strong> (24/7 Lifeline).</span>
+      </div>
+      <div class="flex items-center gap-3 font-medium text-[#A2E2B8]">
+        <span class="hidden md:inline">Sanctuary Suites · San Francisco</span>
+        <button onclick="openEmergencyModal()" class="underline hover:text-white transition-colors">Crisis Protocols & Info →</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- FIXED AMBIENT NATURE BACKGROUND & BLURRED OVERLAY FOR OTHER SECTIONS      -->
+  <!-- ========================================================================= -->
+  <div class="sanctuary-ambient-bg" aria-hidden="true">
+    <img 
+      src="hero-forest-meditation.jpg" 
+      alt="Ambient Forest Sanctuary Background" 
+      class="w-full h-full object-cover object-center filter blur-xl scale-110 opacity-70 select-none"
+    >
+    <div class="sanctuary-ambient-overlay"></div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- FULL-SCREEN DARK GLASSMORPHISM HERO SECTION                               -->
+  <!-- ========================================================================= -->
+  <section 
+    id="hero-section"
+    class="isolate relative w-full min-h-screen lg:h-screen flex flex-col justify-between p-6 sm:p-8 lg:px-12 lg:py-8 xl:px-16 xl:py-9 overflow-hidden"
+    style="background: #050806 url('clinic/ezgif-frame-001.jpg') no-repeat center 38% / cover;"
+  >
+    
+    <!-- LAYER 2A: Fallback Forest Meditation Photograph (Instant First Paint & LCP Element) -->
+    <img 
+      id="hero-fallback-img"
+      src="clinic/ezgif-frame-001.jpg" 
+      alt="Person peacefully meditating in sunlit green forest with lush moss" 
+      class="absolute inset-0 w-full h-full object-cover object-[68%_38%] select-none z-0 pointer-events-none transition-opacity duration-700"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
+
+    <!-- LAYER 2B: High-Performance 199-Frame Motion Canvas -->
+    <canvas 
+      id="hero-motion-canvas"
+      class="absolute inset-0 w-full h-full select-none z-0 pointer-events-none opacity-0 transition-opacity duration-700"
+    ></canvas>
+
+    <!-- LAYER 3: Subtle Dark Overlay for contrast -->
+    <div class="hero-overlay z-[1]"></div>
+
+    <!-- LAYER 4 (TOP): Compact Dark Glass Header & Navigation -->
+    <div class="relative z-10 w-full max-w-[1600px] mx-auto flex items-center justify-between gap-4">
+        
+        <!-- Brand Identity -->
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="w-8 h-8 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 transition-transform">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.12 2.5 7.66 6.07 9.18.23-.27.46-.57.7-.89 1.76-2.34 2.87-5.26 3.16-8.29.02-.2.19-.36.39-.36.2 0 .37.16.39.36.29 3.03 1.4 5.95 3.16 8.29.24.32.47.62.7.89C20.5 19.66 23 16.12 23 12c0-5.52-4.48-10-10-10zm-1.89 9.87c-.36 1.76-1.12 3.39-2.21 4.75-2.03-1.02-3.48-3.03-3.78-5.42 1.94-.48 4.22-.16 5.99.67zm7.88-.67c-.3 2.39-1.75 4.4-3.78 5.42-1.09-1.36-1.85-2.99-2.21-4.75 1.77-.83 4.05-1.15 5.99-.67z"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-sans text-base sm:text-lg font-semibold text-white tracking-tight leading-tight">Care Center</span>
+            <span class="text-[9px] uppercase tracking-widest text-[#A2E2B8] font-semibold leading-none mt-0.5">Health · Mind · You</span>
+          </div>
+        </a>
+
+        <!-- Center Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-5 hero-nav-glass px-6 py-2.5 text-xs sm:text-[13px] font-normal text-white/80">
+          <a href="index.html" class="text-white font-medium border-b-2 border-[#A7E8BD] pb-0.5 transition-colors">Home</a>
+          <a href="services.html" class="hover:text-white transition-colors">Services</a>
+          <a href="about.html" class="hover:text-white transition-colors">About</a>
+          <a href="clinicians.html" class="hover:text-white transition-colors">Clinicians</a>
+          <a href="insurance.html" class="hover:text-white transition-colors">Insurance & Fees</a>
+          <a href="process.html" class="hover:text-white transition-colors">Our Process</a>
+          <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+          <a href="#live-zones" class="hover:text-white transition-colors">Live Zones</a>
+        </nav>
+
+        <!-- Right: Motion Indicator + Patient Portal Button + Mobile Toggle -->
+        <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <button id="hero-motion-toggle" onclick="toggleHeroMotion()" class="hidden sm:inline-flex items-center gap-2 hero-nav-glass hover:bg-white/10 px-3.5 py-2 text-xs text-white/90 font-medium transition-all focus:outline-none" title="Toggle background motion" aria-label="Toggle background motion">
+            <span id="hero-motion-dot" class="w-2 h-2 rounded-full bg-[#A7E8BD] animate-pulse"></span>
+            <span id="hero-motion-text">Motion Live</span>
+          </button>
+
+          <button onclick="openPatientPortalModal()" class="hero-nav-glass hover:bg-white/10 px-4 py-2 flex items-center gap-2 text-xs sm:text-[13px] text-white font-medium transition-all focus:outline-none focus:ring-1 focus:ring-white/40 group">
+            <i data-lucide="user" class="w-3.5 h-3.5 text-[#A7E8BD] group-hover:scale-105 transition-transform"></i>
+            <span>Patient Portal</span>
+          </button>
+
+          <button onclick="toggleMobileMenu()" class="xl:hidden hero-nav-glass p-2 text-white hover:bg-white/10 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+            <i data-lucide="menu" id="mobile-menu-icon" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- LAYER 4 (MIDDLE): Hero Content + Floating Mental Health Card -->
+      <div class="relative z-10 w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center my-auto py-4 sm:py-6 lg:py-8">
+        
+        <!-- LEFT CONTENT AREA: Eyebrow, Sans-Serif Headline, Paragraph, 2 CTAs -->
+        <div class="lg:col-span-7 xl:col-span-6 space-y-4 sm:space-y-4.5">
+          <!-- Exact Eyebrow Text -->
+          <div class="text-[#A2E2B8] text-xs sm:text-[13px] font-semibold tracking-[0.2em] uppercase select-none">
+            COMPLETE CARE. A CALMER YOU.
+          </div>
+
+          <!-- Exact Main Headline (Two Lines, Clean Modern Sans-Serif) -->
+          <h1 class="font-sans text-4xl sm:text-5xl lg:text-[52px] xl:text-[58px] font-normal sm:font-medium leading-[1.06] tracking-tight text-white">
+            <span class="block">Your Health.</span>
+            <span class="block text-[#A7E8BD]">Our Priority.</span>
+          </h1>
+
+          <!-- Exact Supporting Paragraph -->
+          <p class="text-white/85 text-sm sm:text-base lg:text-[16px] leading-relaxed max-w-lg font-normal">
+            Quality medical care, mental health support, and a healthier tomorrow — all in one place.
+          </p>
+
+          <!-- Primary & Secondary CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 sm:gap-4 pt-1.5">
+            <!-- Primary CTA: Book a Visit -->
+            <button onclick="openBookingModal('General Visit')" class="inline-flex items-center justify-center gap-2 bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] font-semibold text-xs sm:text-sm h-[44px] sm:h-[48px] px-6 rounded-full shadow-md shadow-emerald-950/20 transition-all focus:outline-none focus:ring-2 focus:ring-[#A7E8BD]/50 group">
+              <i data-lucide="calendar" class="w-4 h-4 text-[#06291E]"></i>
+              <span>Book a Visit</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+
+            <!-- Secondary CTA: Explore Our Services -->
+            <a href="services.html" class="inline-flex items-center justify-center gap-2 bg-black/25 hover:bg-black/40 text-white font-medium text-xs sm:text-sm h-[44px] sm:h-[48px] px-5 sm:px-6 rounded-full border border-white/20 backdrop-blur-md transition-all focus:outline-none focus:ring-2 focus:ring-white/30 group">
+              <span>Explore Our Services</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-[#A7E8BD] group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Floating Mental Health Information Card -->
+        <div class="lg:col-span-5 xl:col-span-6 relative flex justify-start lg:justify-end">
+          <div class="mental-health-glass-card max-w-[275px] sm:max-w-[295px] p-4 sm:p-5 text-white transition-all duration-300 hover:shadow-2xl">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#A7E8BD] text-[#06291E] flex items-center justify-center shrink-0 shadow-xs">
+                <i data-lucide="heart" class="w-4 h-4 text-[#06291E] fill-[#06291E]/20"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-sans text-sm sm:text-[14.5px] font-semibold text-white leading-snug">
+                  Better Mental Health<br>
+                  <span class="text-[#A7E8BD] font-normal">for a Brighter Tomorrow</span>
+                </h3>
+                <p class="text-[11px] sm:text-xs text-white/75 mt-1.5 leading-relaxed font-normal">
+                  “Professional support, compassionate care, real change.”
+                </p>
+              </div>
+            </div>
+            <a href="services.html" class="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[11px] font-medium text-[#A7E8BD] hover:text-white transition-colors group">
+              <span>Explore mental health services</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LAYER 5 (BOTTOM): Wide Glass Service Navigation Bar -->
+      <div class="relative z-10 w-full max-w-[1600px] mx-auto mt-auto pt-4 sm:pt-6">
+        <div class="hero-service-glass p-3 sm:p-3.5 lg:px-8 lg:py-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+            
+            <!-- Item 1: General Healthcare -->
+            <a href="services.html#general" class="flex items-center gap-3.5 px-3 lg:px-4 py-1.5 rounded-2xl hover:bg-white/5 transition-colors group">
+              <div class="w-9 h-9 rounded-full bg-emerald-950/70 border border-emerald-500/20 text-[#A7E8BD] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                <i data-lucide="cross" class="w-4 h-4 text-[#A7E8BD]"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs sm:text-[13.5px] font-medium text-white group-hover:text-[#A7E8BD] transition-colors truncate">General Healthcare</div>
+                <div class="text-[11px] text-[#A2E2B8]/75 truncate">For every stage of life</div>
+              </div>
+            </a>
+
+            <!-- Item 2: Mental Health Support -->
+            <a href="services.html#mental" class="flex items-center gap-3.5 px-3 lg:px-4 py-1.5 rounded-2xl hover:bg-white/5 transition-colors group">
+              <div class="w-9 h-9 rounded-full bg-emerald-950/70 border border-emerald-500/20 text-[#A7E8BD] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                <i data-lucide="brain" class="w-4 h-4 text-[#A7E8BD]"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs sm:text-[13.5px] font-medium text-white group-hover:text-[#A7E8BD] transition-colors truncate">Mental Health Support</div>
+                <div class="text-[11px] text-[#A2E2B8]/75 truncate">Talk. Heal. Grow.</div>
+              </div>
+            </a>
+
+            <!-- Item 3: Specialist Care -->
+            <a href="services.html#specialists" class="flex items-center gap-3.5 px-3 lg:px-4 py-1.5 rounded-2xl hover:bg-white/5 transition-colors group">
+              <div class="w-9 h-9 rounded-full bg-emerald-950/70 border border-emerald-500/20 text-[#A7E8BD] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                <i data-lucide="users" class="w-4 h-4 text-[#A7E8BD]"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs sm:text-[13.5px] font-medium text-white group-hover:text-[#A7E8BD] transition-colors truncate">Specialist Care</div>
+                <div class="text-[11px] text-[#A2E2B8]/75 truncate">Expertise you can trust</div>
+              </div>
+            </a>
+
+            <!-- Item 4: Emergency Services -->
+            <button type="button" onclick="openEmergencyModal(this)" class="w-full text-left flex items-center gap-3.5 px-3 lg:px-4 py-1.5 rounded-2xl hover:bg-white/5 transition-colors cursor-pointer group focus:outline-none" aria-haspopup="dialog">
+              <div class="w-9 h-9 rounded-full bg-emerald-950/70 border border-emerald-500/20 text-[#A7E8BD] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-[#A7E8BD]"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs sm:text-[13.5px] font-medium text-white group-hover:text-[#A7E8BD] transition-colors truncate">Emergency Services</div>
+                <div class="text-[11px] text-[#A2E2B8]/75 truncate">When it matters most</div>
+              </div>
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT REGION                                                       -->
+  <!-- ========================================================================= -->
+  <main id="main-content" class="relative z-10">
+
+  <!-- ========================================================================= -->
+  <!-- ACCEPTED INSURANCE BAR                                                    -->
+  <!-- ========================================================================= -->
+  <section class="glass-surface-dark max-w-[1560px] w-[96%] sm:w-[97%] xl:w-[98%] mx-auto my-6 py-6 px-6 sm:px-10 lg:px-14 border border-white/10 rounded-[28px] shadow-xl">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="text-xs uppercase tracking-widest font-semibold text-[#A2E2B8] block mb-1">Accepted Health Networks</span>
+        <p class="text-sm font-medium text-white">Direct In-Network Claims & Superbill Filing Support</p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 sm:gap-8 opacity-90 text-white/80">
+        <span class="font-serif text-lg tracking-wider font-semibold text-white">Anthem</span>
+        <span class="font-sans text-lg tracking-tight font-extrabold text-white">aetna</span>
+        <span class="font-sans text-lg tracking-wide font-bold text-white">Cigna</span>
+        <span class="font-serif text-lg tracking-tight font-medium text-white">BlueCross</span>
+        <span class="font-sans text-xs tracking-wider font-bold border-2 border-[#A7E8BD] px-2.5 py-0.5 rounded text-[#A7E8BD]">MEDICARE</span>
+        <span class="font-sans text-sm font-semibold text-white">UnitedHealthcare</span>
+        <a href="insurance.html" class="font-sans text-xs font-semibold text-[#06291E] bg-[#A7E8BD] hover:bg-[#B8F0CC] px-4 py-1.5 rounded-full shadow-sm transition-all">
+          View All Insurance & Fees →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- LIVE CLINIC ZONES & AVAILABILITY                                          -->
+  <!-- ========================================================================= -->
+  <section id="live-zones" class="py-16 sm:py-20 scroll-mt-6">
+    <div class="max-w-[1560px] w-[96%] sm:w-[97%] xl:w-[98%] mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+        <div>
+          <span class="text-xs font-semibold tracking-widest uppercase text-[#A2E2B8]">Live Sanctuary Zones</span>
+          <h2 class="font-sans text-3xl sm:text-4xl text-white font-medium mt-1">
+            Real-Time Availability & Sanctuary Status
+          </h2>
+        </div>
+        <a href="about.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#A7E8BD] hover:text-white transition-colors mt-2 md:mt-0">
+          <span>Explore Sanctuary Facility</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Zone 1 -->
+        <div class="glass-surface-dark p-6 sm:p-7 flex flex-col justify-between hover:border-[#A7E8BD]/50 hover:bg-white/[0.08] transition-all duration-300 rounded-[28px] border border-white/10 shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Open · Accepting Patients</span>
+              </span>
+              <span class="text-xs font-mono text-white/50">Suite 1200</span>
+            </div>
+            <h3 class="font-sans text-xl text-white font-semibold mb-2">Sanctuary Suites (In-Person)</h3>
+            <p class="text-xs text-white/75 leading-relaxed mb-4 font-light">
+              Soundproofed acoustic rooms with warm natural lighting, HEPA purification, and private consultation gardens.
+            </p>
+            <div class="p-3 bg-black/40 rounded-xl border border-white/10 text-xs space-y-1.5 mb-4">
+              <div class="flex justify-between text-white/70">
+                <span>Earliest Open Slot:</span>
+                <strong class="text-[#A7E8BD]">Mon, 10:30 AM</strong>
+              </div>
+              <div class="flex justify-between text-white/70">
+                <span>Avg. Appointment Wait:</span>
+                <strong class="text-[#A7E8BD]">~10 Mins (Prompt)</strong>
+              </div>
+            </div>
+          </div>
+          <button onclick="openBookingModal('In-Person Sanctuary Intake')" class="w-full text-xs font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/15 py-2.5 rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+            <span>Book In-Person Session</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Zone 2 -->
+        <div class="glass-surface-dark p-6 sm:p-7 flex flex-col justify-between hover:border-[#A7E8BD]/50 hover:bg-white/[0.08] transition-all duration-300 rounded-[28px] border border-white/10 shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Active · Live Portals</span>
+              </span>
+              <span class="text-xs font-mono text-white/50">Statewide CA</span>
+            </div>
+            <h3 class="font-sans text-xl text-white font-semibold mb-2">Telehealth Virtual Suites</h3>
+            <p class="text-xs text-white/75 leading-relaxed mb-4 font-light">
+              HIPAA-compliant, 256-bit encrypted high-definition video rooms accessible instantly with zero software downloads.
+            </p>
+            <div class="p-3 bg-black/40 rounded-xl border border-white/10 text-xs space-y-1.5 mb-4">
+              <div class="flex justify-between text-white/70">
+                <span>Next Video Opening:</span>
+                <strong class="text-[#A7E8BD]">Wed, 2:00 PM</strong>
+              </div>
+              <div class="flex justify-between text-white/70">
+                <span>Immediate Intake Wait:</span>
+                <strong class="text-[#A7E8BD]">&lt; 15 Mins Verification</strong>
+              </div>
+            </div>
+          </div>
+          <button onclick="openTelehealthModal()" class="w-full text-xs font-semibold text-[#06291E] bg-[#A7E8BD] hover:bg-[#B8F0CC] py-2.5 rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+            <span>Join Telehealth Portal</span>
+            <i data-lucide="video" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Zone 3 -->
+        <div class="glass-surface-dark p-6 sm:p-7 flex flex-col justify-between hover:border-[#A7E8BD]/50 hover:bg-white/[0.08] transition-all duration-300 rounded-[28px] border border-white/10 shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Sanctuary Open Access</span>
+              </span>
+              <span class="text-xs font-mono text-white/50">Floor 12 Patio</span>
+            </div>
+            <h3 class="font-sans text-xl text-white font-semibold mb-2">Mindfulness & Restorative Patio</h3>
+            <p class="text-xs text-white/75 leading-relaxed mb-4 font-light">
+              Open quiet spaces for pre-session grounding, herbal tea service, and sensory decompression overlooking the courtyard.
+            </p>
+            <div class="p-3 bg-black/40 rounded-xl border border-white/10 text-xs space-y-1.5 mb-4">
+              <div class="flex justify-between text-white/70">
+                <span>Quiet Hours Protocol:</span>
+                <strong class="text-[#A7E8BD]">8:00 AM – 7:00 PM</strong>
+              </div>
+              <div class="flex justify-between text-white/70">
+                <span>Acoustic Profile:</span>
+                <strong class="text-[#A7E8BD]">&lt; 32 dB Quietude</strong>
+              </div>
+            </div>
+          </div>
+          <button onclick="openVideoModal()" class="w-full text-xs font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/15 py-2.5 rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+            <span>Tour Sanctuary Spaces</span>
+            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CLINICAL SPECIALTIES HIGHLIGHT BANNER                                     -->
+  <!-- ========================================================================= -->
+  <section class="py-10 sm:py-14">
+    <div class="glass-surface-dark max-w-[1560px] w-[96%] sm:w-[97%] xl:w-[98%] mx-auto p-8 sm:p-12 lg:p-14 rounded-[32px] border border-white/10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-3">
+          <span class="text-xs font-semibold uppercase tracking-widest text-[#A2E2B8]">Care Center Clinical Tracks</span>
+          <h2 class="font-sans text-3xl sm:text-4xl text-white font-medium">
+            Psychiatry, Psychotherapy, Trauma Recovery & Preventive Health
+          </h2>
+          <p class="text-white/80 text-sm max-w-2xl font-light leading-relaxed">
+            Every clinical roadmap is designed around your bio-rhythms, lifestyle, and nervous system resilience.
+          </p>
+        </div>
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+          <a href="services.html" class="inline-flex items-center justify-center gap-2 bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] font-semibold px-6 py-3.5 rounded-full shadow-md transition-all text-sm group">
+            <span>Explore All 6 Clinical Tracks</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+          </a>
+          <a href="clinicians.html" class="inline-flex items-center justify-center gap-2 border border-white/25 text-white font-medium px-6 py-3.5 rounded-full hover:bg-white/10 transition-colors text-sm">
+            <span>Meet Our Clinicians</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MULTIPAGE HUB: QUICK NAV CARDS TO OTHER SECTIONS                         -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-[1560px] w-[96%] sm:w-[97%] xl:w-[98%] mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-semibold tracking-widest uppercase text-[#A2E2B8]">Explore Care Center</span>
+        <h2 class="font-sans text-3xl sm:text-4xl text-white font-medium mt-1">
+          Everything you need for your healthcare journey.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Hub Card 1 -->
+        <a href="about.html" class="glass-surface-dark p-6 group hover:-translate-y-1.5 hover:border-[#A7E8BD]/50 hover:bg-white/[0.08] transition-all duration-300 rounded-[28px] border border-white/10 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="landmark" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-sans text-xl font-semibold text-white mb-1.5">About Sanctuary</h3>
+            <p class="text-xs text-white/75 leading-relaxed font-light">
+              Discover our founding story, calming acoustic architecture, and our anti-hurry clinical philosophy.
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#A7E8BD] mt-4 group-hover:text-white transition-colors">
+            <span>Read Our Story</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+          </span>
+        </a>
+
+        <!-- Hub Card 2 -->
+        <a href="clinicians.html" class="glass-surface-dark p-6 group hover:-translate-y-1.5 hover:border-[#A7E8BD]/50 hover:bg-white/[0.08] transition-all duration-300 rounded-[28px] border border-white/10 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-sans text-xl font-semibold text-white mb-1.5">Clinician Directory</h3>
+            <p class="text-xs text-white/75 leading-relaxed font-light">
+              Meet our board-certified psychiatrists, licensed therapists, and trauma EMDR specialists.
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#A7E8BD] mt-4 group-hover:text-white transition-colors">
+            <span>View All Profiles</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+          </span>
+        </a>
+
+        <!-- Hub Card 3 -->
+        <a href="insurance.html" class="glass-surface-dark p-6 group hover:-translate-y-1.5 hover:border-[#A7E8BD]/50 hover:bg-white/[0.08] transition-all duration-300 rounded-[28px] border border-white/10 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="credit-card" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-sans text-xl font-semibold text-white mb-1.5">Insurance & Fees</h3>
+            <p class="text-xs text-white/75 leading-relaxed font-light">
+              Learn about in-network coverage with Aetna, Cigna, Medicare, Superbills, and clear transparent fees.
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#A7E8BD] mt-4 group-hover:text-white transition-colors">
+            <span>Verify Benefits</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+          </span>
+        </a>
+
+        <!-- Hub Card 4 -->
+        <a href="process.html" class="glass-surface-dark p-6 group hover:-translate-y-1.5 hover:border-[#A7E8BD]/50 hover:bg-white/[0.08] transition-all duration-300 rounded-[28px] border border-white/10 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="compass" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-sans text-xl font-semibold text-white mb-1.5">Our Process</h3>
+            <p class="text-xs text-white/75 leading-relaxed font-light">
+              A transparent 3-step onboarding guide: free match call, unhurried 60-min intake, and tailored care plan.
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#A7E8BD] mt-4 group-hover:text-white transition-colors">
+            <span>See How It Works</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="relative z-10 bg-forest-850/90 backdrop-blur-xl text-stone-400 py-16 border-t border-forest-800 mt-auto">
+    <div class="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-forest-800">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-forest-900 text-mint-100 flex items-center justify-center font-serif text-base font-bold shadow-inner">C</div>
+            <div>
+              <span class="font-serif text-xl text-white font-medium block">Care Center</span>
+              <span class="text-[10px] text-mint-100 tracking-wider uppercase font-semibold">Health · Mind · You</span>
+            </div>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed mt-2">
+            A quiet sanctuary for general medical care, psychiatric evaluations, evidence-based psychotherapy, and restorative wellness.
+          </p>
+          <div class="pt-2 flex items-center gap-3 text-stone-400 text-sm">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Care Center Instagram" class="hover:text-mint-100 transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Care Center LinkedIn" class="hover:text-mint-100 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="mailto:concierge@carecenter.health" aria-label="Email Care Center Concierge" class="hover:text-mint-100 transition-colors"><i data-lucide="mail" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="glass-surface-dark p-5">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-mint-100 mb-3 font-semibold">Site Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="about.html" class="hover:text-white transition-colors">About Our Sanctuary</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Clinical Services</a></li>
+            <li><a href="clinicians.html" class="hover:text-white transition-colors">Clinician Directory</a></li>
+            <li><a href="insurance.html" class="hover:text-white transition-colors">Insurance & Fees</a></li>
+            <li><a href="process.html" class="hover:text-white transition-colors">Our Process</a></li>
+            <li><a href="faq.html" class="hover:text-white transition-colors">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div class="glass-surface-dark p-5">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-mint-100 mb-3 font-semibold">Sanctuary Suites</h4>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            450 Sutter Street, Suite 1200<br>
+            San Francisco, CA 94108<br>
+            <span class="text-mint-100 mt-2 block font-medium">Statewide Telehealth Licensure</span>
+          </p>
+          <p class="text-xs text-stone-400 mt-3">
+            Hours: Mon–Fri: 8:00am – 7:00pm<br>
+            Sat: 9:00am – 3:00pm
+          </p>
+        </div>
+
+        <div class="glass-surface-dark p-5">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-rose-300 mb-3 font-semibold">Crisis Resources</h4>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            If you are in acute crisis, experiencing thoughts of self-harm, or facing a medical emergency, please dial or text <strong class="text-white">988</strong> immediately to connect with the 24/7 Suicide & Crisis Lifeline.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <div>© 2026 Care Center Healthcare Group, LLC. All rights reserved. 100% HIPAA Compliant.</div>
+        <div class="flex gap-4">
+          <a href="insurance.html#good-faith" class="hover:text-stone-300 transition-colors">Good Faith Estimate</a>
+          <a href="about.html#hipaa" class="hover:text-stone-300 transition-colors">Privacy Practices</a>
+          <a href="about.html#compliance" class="hover:text-stone-300 transition-colors">Notice of Non-Discrimination</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- FLOATING CARE CONCIERGE & CHATBOT                                         -->
+  <!-- ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button onclick="toggleCareConcierge()" class="group flex items-center gap-2.5 bg-emerald-950/90 hover:bg-emerald-900 text-white px-5 py-3 rounded-full shadow-2xl border border-[#A7E8BD]/40 backdrop-blur-xl transition-all hover:scale-105">
+      <span class="relative flex h-2.5 w-2.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A7E8BD] opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#A7E8BD]"></span>
+      </span>
+      <i data-lucide="message-square" class="w-4 h-4 text-[#A7E8BD]"></i>
+      <span class="text-xs font-semibold tracking-wide">Care Concierge</span>
+    </button>
+  </div>
+
+  <div id="care-concierge-modal" role="dialog" aria-modal="false" aria-labelledby="concierge-title" class="fixed bottom-20 right-6 z-50 w-84 sm:w-96 glass-surface-dark p-5 shadow-2xl hidden transition-all duration-300 flex flex-col max-h-[520px] rounded-[28px] border border-white/15">
+    <div class="flex items-center justify-between pb-3 border-b border-white/10 shrink-0">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center font-sans text-xs font-bold shadow-sm">C</div>
+        <div>
+          <h4 id="concierge-title" class="text-xs font-semibold text-white">Care Center Concierge</h4>
+          <span class="text-[10px] text-[#A2E2B8] font-medium flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#A7E8BD] animate-pulse"></span> Live Intake Assistant Online
+          </span>
+        </div>
+      </div>
+      <button type="button" onclick="toggleCareConcierge()" class="touch-target-44 text-white/60 hover:text-white rounded-full hover:bg-white/10" aria-label="Close Care Concierge">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <div id="concierge-messages" role="log" aria-live="polite" aria-atomic="false" class="py-3 space-y-2.5 text-xs overflow-y-auto flex-1 pr-1">
+      <div class="bg-white/10 p-3 rounded-2xl border border-white/10 shadow-xs text-white/90">
+        Hello! I am your Care Center concierge. How can we support your healing or scheduling today?
+      </div>
+      <div class="space-y-1.5 pt-1">
+        <button onclick="conciergeQuickAction('Check Intake Slots')" class="w-full p-2.5 bg-white/[0.06] hover:bg-white/[0.12] rounded-xl border border-white/10 text-left font-medium text-white transition-colors shadow-2xs flex items-center gap-2">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-[#A7E8BD]"></i>
+          <span>Check Earliest Intake Openings</span>
+        </button>
+        <button onclick="conciergeQuickAction('Verify Insurance')" class="w-full p-2.5 bg-white/[0.06] hover:bg-white/[0.12] rounded-xl border border-white/10 text-left font-medium text-white transition-colors shadow-2xs flex items-center gap-2">
+          <i data-lucide="shield" class="w-3.5 h-3.5 text-[#A7E8BD]"></i>
+          <span>Check Insurance & Superbill Help</span>
+        </button>
+        <a href="tel:5550192834" class="block w-full p-2.5 bg-white/[0.06] hover:bg-white/[0.12] rounded-xl border border-white/10 text-left font-medium text-white transition-colors shadow-2xs flex items-center gap-2">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#A7E8BD]"></i>
+          <span>Call Coordinator: (555) 019-2834</span>
+        </a>
+      </div>
+      <div class="p-2.5 bg-red-950/60 rounded-xl border border-red-500/30 text-[11px] text-red-200 flex items-start gap-2">
+        <i data-lucide="alert-circle" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+        <span>Experiencing a mental health crisis? Call or text <strong>988</strong> anytime 24/7.</span>
+      </div>
+    </div>
+
+    <form onsubmit="handleConciergeChat(event)" class="pt-2 border-t border-white/10 flex items-center gap-2 shrink-0">
+      <label for="concierge-input" class="sr-only">Ask Care Concierge a question</label>
+      <input type="text" id="concierge-input" placeholder="Ask about care, fees, or booking..." class="flex-1 bg-white/10 border border-white/15 rounded-xl px-3 py-2 text-xs text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+      <button type="submit" class="touch-target-44 bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] rounded-xl transition-colors shadow-sm" aria-label="Send message">
+        <i data-lucide="send" class="w-3.5 h-3.5"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODALS                                                                    -->
+  <!-- ========================================================================= -->
+
+  <!-- FULL-SCREEN EDITORIAL NAVIGATION OVERLAY ("Care Center" Menu) -->
+      <div id="mobile-menu" class="hidden fixed inset-0 z-50 nav-overlay-backdrop overflow-y-auto flex items-center justify-center p-3 sm:p-6 lg:p-8 transition-opacity duration-300" onclick="if(event.target === this) toggleMobileMenu();">
+        <div class="relative w-full max-w-[1240px] nav-overlay-card p-6 sm:p-8 lg:p-10 flex flex-col justify-between my-auto">
+          
+          <!-- TOP HEADER BAR: Brand Identity + Motion Toggle + Patient Portal + Circular Close Button -->
+          <div class="flex items-center justify-between pb-5 sm:pb-6 border-b border-white/[0.08]">
+            
+            <!-- Brand Logo & Title -->
+            <a href="index.html" onclick="toggleMobileMenu();" class="flex items-center gap-3 group focus:outline-none">
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 transition-transform">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 4.12 2.5 7.66 6.07 9.18.23-.27.46-.57.7-.89 1.76-2.34 2.87-5.26 3.16-8.29.02-.2.19-.36.39-.36.2 0 .37.16.39.36.29 3.03 1.4 5.95 3.16 8.29.24.32.47.62.7.89C20.5 19.66 23 16.12 23 12c0-5.52-4.48-10-10-10zm-1.89 9.87c-.36 1.76-1.12 3.39-2.21 4.75-2.03-1.02-3.48-3.03-3.78-5.42 1.94-.48 4.22-.16 5.99.67zm7.88-.67c-.3 2.39-1.75 4.4-3.78 5.42-1.09-1.36-1.85-2.99-2.21-4.75 1.77-.83 4.05-1.15 5.99-.67z"/>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-sans text-base sm:text-lg font-semibold text-white tracking-tight leading-tight">Care Center</span>
+                <span class="text-[9px] uppercase tracking-widest text-[#A2E2B8] font-semibold leading-none mt-0.5">Health · Mind · You</span>
+              </div>
+            </a>
+
+            <!-- Right Controls: Motion Live, Patient Portal, Circular Close Button -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+              <button onclick="toggleHeroMotion();" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-xs text-white/90 font-medium transition-all focus:outline-none" title="Toggle background motion">
+                <span class="w-2 h-2 rounded-full bg-[#A7E8BD] animate-pulse"></span>
+                <span>Motion Live</span>
+              </button>
+
+              <button onclick="openPatientPortalModal(); toggleMobileMenu();" class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-xs sm:text-[13px] text-white font-medium transition-all group focus:outline-none">
+                <i data-lucide="user" class="w-3.5 h-3.5 text-[#A7E8BD] group-hover:scale-105 transition-transform"></i>
+                <span>Patient Portal</span>
+              </button>
+
+              <button onclick="toggleMobileMenu();" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center border border-white/15 transition-all focus:outline-none hover:scale-105 active:scale-95" aria-label="Close navigation overlay">
+                <i data-lucide="x" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- RESPONSIVE 2-COLUMN DESKTOP GRID (Eliminates Dead Space) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 my-6 sm:my-8 items-start">
+            
+            <!-- LEFT COLUMN: 8 Numbered Editorial Navigation Rows -->
+            <div class="lg:col-span-7 flex flex-col">
+              <div class="text-[11px] font-mono uppercase tracking-[0.2em] text-[#8ab89a] mb-2 font-semibold select-none">
+                Sanctuary Directory · 8 Dedicated Portals
+              </div>
+
+              <nav class="flex flex-col" aria-label="Editorial Menu Navigation">
+                
+                <!-- 01 Home (Active Page) -->
+                <a href="index.html" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-semibold text-[#a3e6b8] select-none tracking-wider w-6">01</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-medium tracking-tight text-[#a3e6b8] translate-x-2 transition-transform duration-300">Home</span>
+                  </div>
+                  <span class="text-[#a3e6b8] text-lg font-light">→</span>
+                </a>
+
+                <!-- 02 Services -->
+                <a href="services.html" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-medium text-[#8ab89a] select-none tracking-wider w-6">02</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-normal tracking-tight text-[#f0f7f2] group-hover:text-[#a3e6b8] group-hover:translate-x-2 transition-transform duration-300">Services</span>
+                  </div>
+                  <span class="text-white/25 group-hover:text-[#a3e6b8] group-hover:translate-x-1 transition-all text-lg font-light">→</span>
+                </a>
+
+                <!-- 03 About Our Sanctuary -->
+                <a href="about.html" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-medium text-[#8ab89a] select-none tracking-wider w-6">03</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-normal tracking-tight text-[#f0f7f2] group-hover:text-[#a3e6b8] group-hover:translate-x-2 transition-transform duration-300">About Our Sanctuary</span>
+                  </div>
+                  <span class="text-white/25 group-hover:text-[#a3e6b8] group-hover:translate-x-1 transition-all text-lg font-light">→</span>
+                </a>
+
+                <!-- 04 Clinicians Directory -->
+                <a href="clinicians.html" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-medium text-[#8ab89a] select-none tracking-wider w-6">04</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-normal tracking-tight text-[#f0f7f2] group-hover:text-[#a3e6b8] group-hover:translate-x-2 transition-transform duration-300">Clinicians Directory</span>
+                  </div>
+                  <span class="text-white/25 group-hover:text-[#a3e6b8] group-hover:translate-x-1 transition-all text-lg font-light">→</span>
+                </a>
+
+                <!-- 05 Insurance & Fees -->
+                <a href="insurance.html" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-medium text-[#8ab89a] select-none tracking-wider w-6">05</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-normal tracking-tight text-[#f0f7f2] group-hover:text-[#a3e6b8] group-hover:translate-x-2 transition-transform duration-300">Insurance & Fees</span>
+                  </div>
+                  <span class="text-white/25 group-hover:text-[#a3e6b8] group-hover:translate-x-1 transition-all text-lg font-light">→</span>
+                </a>
+
+                <!-- 06 Our Process -->
+                <a href="process.html" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-medium text-[#8ab89a] select-none tracking-wider w-6">06</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-normal tracking-tight text-[#f0f7f2] group-hover:text-[#a3e6b8] group-hover:translate-x-2 transition-transform duration-300">Our Process</span>
+                  </div>
+                  <span class="text-white/25 group-hover:text-[#a3e6b8] group-hover:translate-x-1 transition-all text-lg font-light">→</span>
+                </a>
+
+                <!-- 07 FAQ -->
+                <a href="faq.html" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-medium text-[#8ab89a] select-none tracking-wider w-6">07</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-normal tracking-tight text-[#f0f7f2] group-hover:text-[#a3e6b8] group-hover:translate-x-2 transition-transform duration-300">FAQ</span>
+                  </div>
+                  <span class="text-white/25 group-hover:text-[#a3e6b8] group-hover:translate-x-1 transition-all text-lg font-light">→</span>
+                </a>
+
+                <!-- 08 Live Sanctuary Zones -->
+                <a href="#live-zones" onclick="toggleMobileMenu();" class="group flex items-center justify-between py-3 sm:py-3.5 border-b border-white/[0.08] hover:border-white/20 transition-all cursor-pointer">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <span class="font-mono text-xs sm:text-sm font-medium text-[#8ab89a] select-none tracking-wider w-6">08</span>
+                    <span class="font-serif text-xl sm:text-2xl lg:text-[26px] font-normal tracking-tight text-[#f0f7f2] group-hover:text-[#a3e6b8] group-hover:translate-x-2 transition-transform duration-300">Live Sanctuary Zones</span>
+                  </div>
+                  <span class="text-white/25 group-hover:text-[#a3e6b8] group-hover:translate-x-1 transition-all text-lg font-light">→</span>
+                </a>
+
+              </nav>
+            </div>
+
+            <!-- RIGHT COLUMN: Utility Panel (Sanctuary Live Zones Status, Location/Hours, Clinical Trust) -->
+            <div class="lg:col-span-5 hidden lg:flex flex-col gap-4">
+              
+              <!-- Live Sanctuary Zones Status Card -->
+              <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b border-white/[0.08]">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-[#A7E8BD] animate-pulse"></span>
+                    <span class="text-xs font-semibold text-white tracking-wide uppercase">Live Sanctuary Status</span>
+                  </div>
+                  <span class="text-[10px] font-mono text-[#8ab89a] uppercase tracking-wider">Presidio Campus</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 text-xs">
+                  <div class="bg-black/25 p-2.5 rounded-xl border border-white/5 space-y-1">
+                    <span class="text-[10px] uppercase text-white/50 block font-mono">Acoustic Field</span>
+                    <span class="text-[#A7E8BD] font-medium block">432 Hz Bio-Harmonics</span>
+                  </div>
+                  <div class="bg-black/25 p-2.5 rounded-xl border border-white/5 space-y-1">
+                    <span class="text-[10px] uppercase text-white/50 block font-mono">Air Purity</span>
+                    <span class="text-[#A7E8BD] font-medium block">4-Stage HEPA · 99.97%</span>
+                  </div>
+                  <div class="bg-black/25 p-2.5 rounded-xl border border-white/5 space-y-1">
+                    <span class="text-[10px] uppercase text-white/50 block font-mono">Circadian Light</span>
+                    <span class="text-white/90 font-medium block">Sunset Mode · 2700K</span>
+                  </div>
+                  <div class="bg-black/25 p-2.5 rounded-xl border border-white/5 space-y-1">
+                    <span class="text-[10px] uppercase text-white/50 block font-mono">Session Pacing</span>
+                    <span class="text-[#A7E8BD] font-medium block">Unhurried · Min 45m</span>
+                  </div>
+                </div>
+                
+                <p class="text-[11px] text-white/60 leading-relaxed pt-1">
+                  Care Center environmental sensors continuously modulate acoustic frequencies, biophilic lighting, and negative ion output for immediate nervous system down-regulation.
+                </p>
+              </div>
+
+              <!-- Sanctuary Location & Clinical Hours -->
+              <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-5 space-y-2 text-xs">
+                <div class="flex items-center justify-between pb-2 border-b border-white/[0.08]">
+                  <span class="font-semibold text-white">Sanctuary Hours & Location</span>
+                  <span class="text-[10px] text-[#A7E8BD] font-medium">In-Person & Telehealth</span>
+                </div>
+                <div class="text-white/80 space-y-1 text-[11px]">
+                  <p class="flex items-center justify-between">
+                    <span class="text-white/50">Mon – Fri</span>
+                    <span>7:30 AM – 7:00 PM PST</span>
+                  </p>
+                  <p class="flex items-center justify-between">
+                    <span class="text-white/50">Saturday</span>
+                    <span>8:30 AM – 2:00 PM PST</span>
+                  </p>
+                  <p class="flex items-center justify-between">
+                    <span class="text-white/50">Sanctuary Suite</span>
+                    <span>842 Sanctuary Way, Suite 400, Presidio Health Oasis</span>
+                  </p>
+                  <p class="flex items-center justify-between">
+                    <span class="text-white/50">Direct Desk</span>
+                    <span class="text-[#A7E8BD] font-medium">(415) 890-CARE</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Crisis 988 Disclosures & HIPAA Encrypted Reassurance -->
+              <div class="bg-emerald-950/40 border border-emerald-500/20 rounded-xl p-3 flex items-start gap-2.5 text-xs text-white/80">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-[#A7E8BD] shrink-0 mt-0.5"></i>
+                <p class="text-[11px] text-white/70 leading-relaxed">
+                  <strong class="text-white">Emergency Disclosure:</strong> In acute psychiatric distress or immediate danger, dial or text <strong class="text-[#A7E8BD]">988</strong> (Suicide & Crisis Lifeline) or call <strong class="text-white">911</strong>. All consultations are HIPAA-compliant and encrypted.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- REFACTORED BOTTOM CTA BUTTONS: Side-by-Side Grid with Left Labels & Right Circular Badges -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-5 sm:pt-6 border-t border-white/[0.10]">
+            
+            <!-- Primary CTA: Book a Visit -->
+            <button onclick="openBookingModal('General Visit'); toggleMobileMenu();" class="w-full flex items-center justify-between px-6 py-4 rounded-full bg-[#A8E6BD] hover:bg-[#bcf2cf] text-[#0A1910] font-semibold text-sm sm:text-base shadow-lg hover:shadow-emerald-900/30 transition-all duration-300 group focus:outline-none">
+              <div class="flex flex-col text-left">
+                <span class="tracking-tight text-sm sm:text-[15px] font-bold">Book a Sanctuary Visit</span>
+                <span class="text-[11px] font-medium text-[#0A1910]/75">Complimentary 15-Minute Intake Match</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-[#0A1910] text-[#A8E6BD] flex items-center justify-center shrink-0 ml-3 group-hover:translate-x-1 transition-transform">
+                <span class="text-sm font-bold">→</span>
+              </div>
+            </button>
+
+            <!-- Secondary CTA: Touchless Patient Check-In -->
+            <button onclick="openCheckInModal(); toggleMobileMenu();" class="w-full flex items-center justify-between px-6 py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/15 hover:border-white/30 font-medium text-sm sm:text-base shadow-md transition-all duration-300 group focus:outline-none">
+              <div class="flex flex-col text-left">
+                <span class="tracking-tight text-sm sm:text-[15px] font-semibold">Touchless Patient Check-In</span>
+                <span class="text-[11px] font-normal text-white/60">Arrived at sanctuary? Notify your clinician</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center shrink-0 ml-3 group-hover:translate-x-1 transition-transform">
+                <span class="text-sm font-bold">→</span>
+              </div>
+            </button>
+
+          </div>
+
+        </div>
+
+    </div>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title" class="fixed inset-0 z-50 bg-[#050806]/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-surface-dark max-w-lg w-full p-6 sm:p-7 relative shadow-2xl max-h-[90vh] overflow-y-auto rounded-3xl border border-white/20 text-white">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center font-sans text-xs font-bold">C</div>
+          <div>
+            <h3 id="booking-modal-title" class="font-sans text-xl text-white font-semibold">Book Your Appointment</h3>
+            <span class="text-[11px] text-[#A2E2B8]">Care Center · Health · Mind · You</span>
+          </div>
+        </div>
+        <button type="button" onclick="closeBookingModal()" class="touch-target-44 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white shadow-2xs" aria-label="Close booking modal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-3.5 mb-4 rounded-2xl bg-white/[0.06] border border-white/10">
+        <div class="flex items-center justify-between text-xs font-semibold text-white mb-2">
+          <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5 text-[#A7E8BD]"></i> Earliest Open Slots</span>
+          <span class="text-[10px] bg-[#A7E8BD] text-[#06291E] px-2 py-0.5 rounded-full font-mono font-bold">Real-Time Sync</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="bg-black/40 p-2.5 rounded-xl border border-white/10">
+            <span class="font-semibold text-white">Mon, Nov 3</span>
+            <div class="text-[#A7E8BD] font-medium text-[11px]">3 In-Person Slots</div>
+          </div>
+          <div class="bg-black/40 p-2.5 rounded-xl border border-white/10">
+            <span class="font-semibold text-white">Wed, Nov 5</span>
+            <div class="text-[#A7E8BD] font-medium text-[11px]">Telehealth Available</div>
+          </div>
+        </div>
+      </div>
+
+      <form onsubmit="handleBookingSubmit(event)" class="space-y-3.5 text-left">
+        <div>
+          <label for="modal-name" class="block text-xs font-medium text-white/80 mb-1">Full Name</label>
+          <input type="text" id="modal-name" name="name" autocomplete="name" required placeholder="Eleanor Vance" class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="modal-email" class="block text-xs font-medium text-white/80 mb-1">Email Address</label>
+            <input type="email" id="modal-email" name="email" autocomplete="email" required placeholder="eleanor@example.com" class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+          </div>
+          <div>
+            <label for="modal-phone" class="block text-xs font-medium text-white/80 mb-1">Phone Number</label>
+            <input type="tel" id="modal-phone" name="phone" autocomplete="tel" required placeholder="(555) 019-2834" class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+          </div>
+        </div>
+
+        <div>
+          <label for="modal-service" class="block text-xs font-medium text-white/80 mb-1">Clinical Service Needed</label>
+          <select id="modal-service" class="w-full bg-[#082016] border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+            <option value="General Intake">General Medical Consultation & Wellness</option>
+            <option value="Psychiatry">Psychiatry & Medication Management</option>
+            <option value="Psychotherapy">Individual Psychotherapy (Anxiety/Depression)</option>
+            <option value="Trauma & EMDR">Trauma & EMDR Therapy</option>
+            <option value="Couples Therapy">Couples & Family Counseling</option>
+            <option value="Free 15-Min Match Call">Free 15-Minute Match Consultation</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/80 mb-1">Preferred Modality</label>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <label class="flex items-center gap-2 bg-white/[0.06] p-2.5 rounded-xl border border-white/10 cursor-pointer hover:bg-white/[0.12] transition-colors">
+              <input type="radio" name="modality" value="In-Person" aria-label="In-Person Clinic Consultation" checked class="text-[#A7E8BD] focus:ring-[#A7E8BD]">
+              <span class="font-medium text-white">In-Person Clinic</span>
+            </label>
+            <label class="flex items-center gap-2 bg-white/[0.06] p-2.5 rounded-xl border border-white/10 cursor-pointer hover:bg-white/[0.12] transition-colors">
+              <input type="radio" name="modality" value="Telehealth" aria-label="Secure Telehealth Consultation" class="text-[#A7E8BD] focus:ring-[#A7E8BD]">
+              <span class="font-medium text-white">Secure Telehealth</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="pt-1">
+          <label class="flex items-start gap-2 text-[11px] text-white/70 cursor-pointer">
+            <input type="checkbox" required aria-label="Acknowledge outpatient ambulatory clinic status and HIPAA consent" class="rounded text-[#A7E8BD] focus:ring-[#A7E8BD] mt-0.5">
+            <span>I acknowledge that Care Center is an outpatient ambulatory clinic. I consent to HIPAA-compliant intake communications.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full mt-2 bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] font-semibold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-sm">
+          <span>Confirm & Request Appointment</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Video Tour Modal -->
+  <div id="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-modal-title" class="fixed inset-0 z-50 bg-[#050806]/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-surface-dark max-w-2xl w-full p-6 relative shadow-2xl rounded-3xl border border-white/20 text-white">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center text-xs font-sans font-bold">C</div>
+          <h3 id="video-modal-title" class="font-sans text-xl text-white font-semibold">Care Center Virtual Sanctuary Tour</h3>
+        </div>
+        <button type="button" onclick="closeVideoModal()" class="touch-target-44 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white shadow-2xs" aria-label="Close video tour modal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div class="aspect-video bg-forest-950 rounded-2xl overflow-hidden relative group">
+        <img src="hero-forest-meditation.jpg" alt="Clinic peaceful forest view" class="w-full h-full object-cover opacity-70">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-6 bg-forest-950/40">
+          <button type="button" aria-label="Play virtual tour video" class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-3 border border-white/40 shadow-lg cursor-pointer hover:scale-110 transition-transform focus:outline-none">
+            <i data-lucide="play" class="w-7 h-7 fill-white ml-1"></i>
+          </button>
+          <p class="font-serif text-lg font-medium">Inside Our Calm Sanctuary & Mindfulness Gardens</p>
+          <p class="text-xs text-stone-200 mt-1 max-w-sm">Experience our private acoustic consultation rooms, natural oak appointments, and peaceful setting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Telehealth Modal -->
+  <div id="telehealth-modal" role="dialog" aria-modal="true" aria-labelledby="telehealth-modal-title" class="fixed inset-0 z-50 bg-[#050806]/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-surface-dark max-w-md w-full p-6 relative shadow-2xl rounded-3xl border border-white/20 text-white">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center text-xs font-sans font-bold">C</div>
+          <h3 id="telehealth-modal-title" class="font-sans text-xl text-white font-semibold">Join Telehealth Room</h3>
+        </div>
+        <button type="button" onclick="closeTelehealthModal()" class="touch-target-44 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white shadow-2xs" aria-label="Close telehealth modal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <p class="text-xs text-white/75 leading-relaxed mb-4">
+        Enter your session access code or registered patient email to enter your secure, HIPAA-compliant telehealth room:
+      </p>
+      <form onsubmit="handleTelehealthJoin(event)" class="space-y-3">
+        <label for="telehealth-code" class="sr-only">Session Code or Patient Email</label>
+        <input type="text" id="telehealth-code" required placeholder="Session Code or Patient Email" class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+        <button type="submit" class="w-full bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] font-semibold py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow">
+          Enter Video Room →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Patient Portal Modal -->
+  <div id="patient-portal-modal" role="dialog" aria-modal="true" aria-labelledby="portal-modal-title" class="fixed inset-0 z-50 bg-[#050806]/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-surface-dark max-w-md w-full p-6 relative shadow-2xl rounded-3xl border border-white/20 text-white">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center shadow-xs">
+            <i data-lucide="user" class="w-4 h-4 text-[#A7E8BD]"></i>
+          </div>
+          <div>
+            <h3 id="portal-modal-title" class="font-sans text-lg text-white font-semibold">Care Center Patient Portal</h3>
+            <p class="text-[11px] text-[#A2E2B8]">256-Bit HIPAA Encrypted Health Records</p>
+          </div>
+        </div>
+        <button type="button" onclick="closePatientPortalModal()" class="touch-target-44 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white shadow-2xs" aria-label="Close patient portal modal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <form onsubmit="handlePortalLogin(event)" class="space-y-3.5">
+        <div>
+          <label for="portal-email" class="block text-xs font-medium text-white/80 mb-1">Email or Health ID</label>
+          <input type="email" id="portal-email" autocomplete="username" required placeholder="patient@example.com" class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+        </div>
+        <div>
+          <label for="portal-pass" class="block text-xs font-medium text-white/80 mb-1">Password</label>
+          <input type="password" id="portal-pass" autocomplete="current-password" required placeholder="••••••••" class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+        </div>
+        <div class="flex items-center justify-between text-xs pt-1">
+          <label class="flex items-center gap-1.5 text-white/70 cursor-pointer">
+            <input type="checkbox" checked aria-label="Remember this device" class="rounded text-[#A7E8BD] focus:ring-[#A7E8BD]">
+            <span>Remember this device</span>
+          </label>
+          <button type="button" onclick="alert('A password reset link will be sent to your registered email address.');" class="text-[#A7E8BD] font-medium hover:underline focus:outline-none">Forgot password?</button>
+        </div>
+        <button type="submit" class="w-full bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] font-semibold py-2.5 rounded-xl text-sm transition-all shadow-md">
+          Sign In to Patient Portal →
+        </button>
+      </form>
+      <div class="mt-4 pt-3 border-t border-white/10 text-center text-xs text-white/60">
+        Need an account? <button type="button" onclick="closePatientPortalModal(); openBookingModal('General Intake');" class="text-[#A7E8BD] font-medium hover:underline focus:outline-none">Register at initial intake</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Touchless Check-In Modal -->
+  <div id="check-in-modal" role="dialog" aria-modal="true" aria-labelledby="checkin-modal-title" class="fixed inset-0 z-50 bg-[#050806]/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-surface-dark max-w-md w-full p-6 relative shadow-2xl rounded-3xl border border-white/20 text-white">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[#A7E8BD] flex items-center justify-center shadow-xs">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-[#A7E8BD]"></i>
+          </div>
+          <div>
+            <h3 id="checkin-modal-title" class="font-sans text-lg text-white font-semibold">Touchless Patient Check-In</h3>
+            <p class="text-[11px] text-[#A2E2B8]">Notify your clinician you have arrived</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeCheckInModal()" class="touch-target-44 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white shadow-2xs" aria-label="Close check-in modal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <form onsubmit="handleCheckInSubmit(event)" class="space-y-3.5">
+        <div>
+          <label for="checkin-name" class="block text-xs font-medium text-white/80 mb-1">Your Full Name</label>
+          <input type="text" id="checkin-name" autocomplete="name" required placeholder="Eleanor Vance" class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+        </div>
+        <div>
+          <label for="checkin-dob" class="block text-xs font-medium text-white/80 mb-1">Date of Birth</label>
+          <input type="date" id="checkin-dob" required class="w-full bg-[#082016] border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+        </div>
+        <div>
+          <label for="checkin-type" class="block text-xs font-medium text-white/80 mb-1">Appointment Type</label>
+          <select id="checkin-type" class="w-full bg-[#082016] border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-[#A7E8BD]/50 focus:border-[#A7E8BD]">
+            <option value="in-person">In-Person at Sanctuary Clinic</option>
+            <option value="telehealth">Virtual Telehealth Room</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] font-semibold py-2.5 rounded-xl text-sm transition-all shadow-md">
+          Confirm Arrival & Notify Doctor →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Emergency & Crisis Guidance Modal -->
+  <div id="emergency-modal" role="alertdialog" aria-modal="true" aria-labelledby="emergency-modal-title" aria-describedby="emergency-modal-desc" class="fixed inset-0 z-50 bg-[#050806]/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-surface-dark max-w-lg w-full p-6 sm:p-7 relative shadow-2xl rounded-3xl border border-red-500/30 text-white">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-red-950/80 border border-red-500/30 text-red-400 flex items-center justify-center shrink-0">
+            <i data-lucide="shield-alert" class="w-5 h-5 text-red-400"></i>
+          </div>
+          <div>
+            <h3 id="emergency-modal-title" class="font-sans text-lg font-bold text-white">Emergency & Crisis Information</h3>
+            <p class="text-[11px] text-white/60">Protocols for acute medical or mental health situations</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeEmergencyModal()" class="touch-target-44 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white shadow-2xs" aria-label="Close emergency information modal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="emergency-modal-desc" class="space-y-3.5 text-xs text-white/80 leading-relaxed">
+        <div class="p-3.5 rounded-xl bg-red-950/50 border border-red-500/40 text-red-200">
+          <strong class="font-semibold block mb-1">Life-Threatening Emergency Notice:</strong>
+          If you or someone in your care is experiencing a life-threatening medical emergency, acute chest pain, severe trauma, or acute psychiatric crisis:
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+          <a href="tel:911" class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl text-sm shadow transition-colors text-center">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>Call 911 Immediately</span>
+          </a>
+          <a href="tel:988" class="flex items-center justify-center gap-2 bg-[#A7E8BD] hover:bg-[#B8F0CC] text-[#06291E] font-bold py-3 px-4 rounded-xl text-sm shadow transition-colors text-center">
+            <i data-lucide="life-buoy" class="w-4 h-4"></i>
+            <span>Dial 988 (Crisis Line)</span>
+          </a>
+        </div>
+        <div class="pt-2 text-[11px] text-white/50">
+          <strong>Care Center Capabilities & Limitations:</strong> Care Center provides scheduled ambulatory medical consultations, outpatient psychiatry, psychotherapy, and same-day urgent care during standard operating hours (8:00 AM – 8:00 PM). We are not an inpatient hospital ER or trauma center.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared JS logic -->
+  <script src="common.js"></script>
+</body>
+</html>
