@@ -149,15 +149,15 @@ body {
   background:
     linear-gradient(
       90deg,
-      rgba(3, 13, 8, 0.88) 0%,
-      rgba(3, 13, 8, 0.54) 38%,
-      rgba(3, 13, 8, 0.12) 72%,
-      rgba(3, 13, 8, 0.22) 100%
+      rgba(3, 13, 8, 0.82) 0%,
+      rgba(3, 13, 8, 0.42) 32%,
+      rgba(3, 13, 8, 0.04) 58%,
+      rgba(3, 13, 8, 0.12) 100%
     ),
     linear-gradient(
       0deg,
-      rgba(3, 13, 8, 0.60) 0%,
-      transparent 38%
+      rgba(3, 13, 8, 0.50) 0%,
+      transparent 28%
     );
   pointer-events: none;
 }

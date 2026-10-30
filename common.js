@@ -394,6 +394,12 @@ function initHeroFrameMotion() {
   const ctx = canvas.getContext('2d', { alpha: false });
   if (!ctx) return;
 
+  function applyHighClarityContext() {
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+  }
+  applyHighClarityContext();
+
   const TOTAL_FRAMES = 199;
   const frames = new Array(TOTAL_FRAMES);
   let currentFrameIndex = 0;
@@ -407,7 +413,7 @@ function initHeroFrameMotion() {
     return `clinic/ezgif-frame-${num}.jpg`;
   }
 
-  // Draw frame with aspect ratio cover and focal alignment
+  // Draw frame with aspect ratio cover, high clarity bicubic filtering, and precise integer pixel coordinates
   function renderFrame(idx) {
     const img = frames[idx];
     if (!img || !img.complete || img.naturalWidth === 0) return;
@@ -421,9 +427,9 @@ function initHeroFrameMotion() {
     const imgAspect = iw / ih;
     const canvasAspect = cw / ch;
 
-    // Focal point alignment: meditating subject centered horizontally & positioned vertically
+    // Focal point alignment: matching fallback photograph (65% horizontal, 38% vertical)
     const isDesktop = window.innerWidth >= 1024;
-    const focalX = isDesktop ? 0.62 : 0.50;
+    const focalX = isDesktop ? 0.65 : 0.50;
     const focalY = 0.38;
 
     let rw, rh, ox, oy;
@@ -439,7 +445,14 @@ function initHeroFrameMotion() {
       oy = 0;
     }
 
-    ctx.drawImage(img, ox, oy, rw, rh);
+    // Subpixel-aligned integer bounds prevent edge blurring and texture shimmering
+    ctx.drawImage(
+      img,
+      Math.round(ox),
+      Math.round(oy),
+      Math.round(rw),
+      Math.round(rh)
+    );
   }
 
   // Responsive canvas resizing with HiDPI support (capped at 2x) & layout thrashing guards
@@ -455,6 +468,8 @@ function initHeroFrameMotion() {
     if (canvas.width !== newWidth || canvas.height !== newHeight) {
       canvas.width = newWidth;
       canvas.height = newHeight;
+      // Re-apply high clarity after canvas dimension reset
+      applyHighClarityContext();
     }
     renderFrame(currentFrameIndex);
   }
@@ -466,9 +481,9 @@ function initHeroFrameMotion() {
 
   window.addEventListener('resize', resizeCanvas, { passive: true });
 
-  // 120Hz/144Hz Jitter-Free Frame Timing with Delta Accumulator
-  const targetFps = 25; // 25 fps = smooth, calming cinematic meditation motion
-  const frameDuration = 1000 / targetFps; // 40.0ms
+  // Calibrated 22 fps = calming, serene meditation pacing with zero network starvation
+  const targetFps = 22;
+  const frameDuration = 1000 / targetFps; // ~45.45ms
   let lastTime = performance.now();
   let accumulator = 0;
 
@@ -482,7 +497,7 @@ function initHeroFrameMotion() {
     let delta = now - lastTime;
     lastTime = now;
 
-    // Guard against large time jumps after background tab suspension
+    // Guard against large time jumps after tab switching
     if (delta > 250) {
       delta = frameDuration;
     }
@@ -490,21 +505,30 @@ function initHeroFrameMotion() {
     accumulator += delta;
 
     if (accumulator >= frameDuration) {
-      while (accumulator >= frameDuration) {
-        accumulator -= frameDuration;
-        const nextIndex = (currentFrameIndex + 1) % TOTAL_FRAMES;
-        const nextImg = frames[nextIndex];
-        if (nextImg && nextImg.complete && nextImg.naturalWidth > 0) {
-          currentFrameIndex = nextIndex;
+      let steps = Math.floor(accumulator / frameDuration);
+      accumulator -= steps * frameDuration;
+
+      // Advance by elapsed time, prioritizing fluid playback
+      let targetIndex = (currentFrameIndex + steps) % TOTAL_FRAMES;
+      if (frames[targetIndex] && frames[targetIndex].complete && frames[targetIndex].naturalWidth > 0) {
+        currentFrameIndex = targetIndex;
+        renderFrame(currentFrameIndex);
+      } else {
+        // If target is buffering, find nearest ready frame ahead or gracefully hold
+        for (let s = steps; s >= 1; s--) {
+          let testIdx = (currentFrameIndex + s) % TOTAL_FRAMES;
+          if (frames[testIdx] && frames[testIdx].complete && frames[testIdx].naturalWidth > 0) {
+            currentFrameIndex = testIdx;
+            renderFrame(currentFrameIndex);
+            break;
+          }
         }
       }
-      renderFrame(currentFrameIndex);
     }
   }
 
   window._resumeHeroMotion = function() {
     if (!heroRafId && isHeroVisible) {
-      // Resume preloader if frames still needed
       resumePreloader();
       if (hasStarted) {
         lastTime = performance.now();
@@ -521,7 +545,7 @@ function initHeroFrameMotion() {
     }
   };
 
-  // Mobile Bandwidth & Data-Saver Detection (navigator.connection.saveData & slow connections)
+  // Mobile Bandwidth & Data-Saver Detection
   const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
   if (conn) {
     if (conn.saveData || conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g') {
@@ -536,7 +560,6 @@ function initHeroFrameMotion() {
     isHeroMotionPlaying = false;
   }
 
-  // Update UI dot & label if motion is paused by data-saver or reduced-motion
   if (!isHeroMotionPlaying) {
     const dot = document.getElementById('hero-motion-dot');
     const text = document.getElementById('hero-motion-text');
@@ -558,7 +581,6 @@ function initHeroFrameMotion() {
             accumulator = 0;
             heroRafId = requestAnimationFrame(loop);
           }
-          // Resume downloading subsequent frames only when visible
           resumePreloader();
         } else {
           window._pauseHeroMotion();
@@ -568,7 +590,7 @@ function initHeroFrameMotion() {
     observer.observe(heroSection);
   }
 
-  // Tab visibility management (pause animation and preloading when tab is in background)
+  // Tab visibility management
   const onVisibilityChange = () => {
     if (document.hidden) {
       window._pauseHeroMotion();
@@ -578,7 +600,7 @@ function initHeroFrameMotion() {
   };
   document.addEventListener('visibilitychange', onVisibilityChange);
 
-  // Clean lifecycle teardown on pagehide to prevent detached memory leaks
+  // Clean lifecycle teardown
   window.addEventListener('pagehide', () => {
     window._pauseHeroMotion();
     if (resizeRafId) cancelAnimationFrame(resizeRafId);
@@ -587,20 +609,47 @@ function initHeroFrameMotion() {
     document.removeEventListener('visibilitychange', onVisibilityChange);
   }, { once: true });
 
-  // Intelligent Adaptive Preloader
-  // Adaptive concurrency: 2 for cellular/slow connections, 4 for broadband (never saturates 6-slot HTTP limit)
+  // Intelligent Adaptive Preloader with Background Off-Thread GPU Decoding
+  // 8 parallel workers for HTTP/2 Vercel CDN pipelining (3 for cellular)
   let nextLoadIndex = 0;
   let activeWorkers = 0;
   const isSlowConn = conn && (conn.saveData || /2g|3g/.test(conn.effectiveType || ''));
-  const CONCURRENCY = isSlowConn ? 2 : 4;
+  const CONCURRENCY = isSlowConn ? 3 : 8;
+  const INITIAL_PLAYBACK_BUFFER = 20; // 20 frames buffer (~1s) ensures zero stutter on first play
+
+  function onImageDecoded(idx, img) {
+    frames[idx] = img;
+    loadedCount++;
+    activeWorkers--;
+
+    // When Frame 0 is ready, draw it immediately on canvas with high clarity
+    if (idx === 0) {
+      performResize();
+      renderFrame(0);
+    }
+
+    // Start motion loop once generous buffer (20 frames) is loaded and pre-decoded
+    if (loadedCount >= INITIAL_PLAYBACK_BUFFER && !hasStarted && isHeroMotionPlaying) {
+      hasStarted = true;
+      // Smoothly cross-fade to canvas
+      canvas.classList.remove('opacity-0');
+      canvas.classList.add('opacity-100');
+      if (fallbackImg) {
+        fallbackImg.classList.add('opacity-0');
+      }
+      lastTime = performance.now();
+      accumulator = 0;
+      heroRafId = requestAnimationFrame(loop);
+    }
+
+    loadNextImage();
+  }
 
   function loadNextImage() {
-    // If reduced motion or data saver is active and user hasn't explicitly unpaused, stop after Frame 0!
     if ((isDataSaverActive || prefersReduced) && !hasStarted && nextLoadIndex > 0) {
       return;
     }
-    // Pause queue if hero is off-screen to preserve mobile bandwidth and battery
-    if (!isHeroVisible && loadedCount > 10) {
+    if (!isHeroVisible && loadedCount > 25) {
       return;
     }
     if (nextLoadIndex >= TOTAL_FRAMES) {
@@ -613,29 +662,16 @@ function initHeroFrameMotion() {
     img.decoding = 'async';
 
     img.onload = () => {
-      frames[idx] = img;
-      loadedCount++;
-      activeWorkers--;
-
-      // When Frame 0 loads, draw it immediately and smoothly reveal canvas
-      if (idx === 0) {
-        performResize();
-        canvas.classList.remove('opacity-0');
-        canvas.classList.add('opacity-100');
-        if (fallbackImg) {
-          fallbackImg.classList.add('opacity-0');
-        }
+      // Decode off the main thread before inserting into playback buffer
+      if (typeof img.decode === 'function') {
+        img.decode()
+          .catch(() => {})
+          .finally(() => {
+            onImageDecoded(idx, img);
+          });
+      } else {
+        onImageDecoded(idx, img);
       }
-
-      // Start motion loop once initial buffer (6 frames) is loaded
-      if (loadedCount >= 6 && !hasStarted && isHeroMotionPlaying) {
-        hasStarted = true;
-        lastTime = performance.now();
-        accumulator = 0;
-        heroRafId = requestAnimationFrame(loop);
-      }
-
-      loadNextImage();
     };
 
     img.onerror = () => {
@@ -656,7 +692,7 @@ function initHeroFrameMotion() {
   // Preload Frame 0 immediately
   loadNextImage();
 
-  // If user doesn't have data saver or reduced motion enabled, kick off concurrent pipeline
+  // Kick off concurrent download pipeline
   if (!isDataSaverActive && !prefersReduced) {
     for (let c = 1; c < CONCURRENCY; c++) {
       loadNextImage();
